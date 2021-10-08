@@ -1,13 +1,18 @@
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import './styles/App.scss';
 
-function App() {
+// Imports das Pages
+import Home from './pages/Home';
+import NotFound from './pages/NotFound';
+
+export default function App() {
   return (
-    <div className="App">
-      HELLO WORLD!
-      <br /><br />
-      <small>🚀 <a href="https://instagram.com/brayam.henrik" target="_blank" rel="noreferrer">by @Brayam.Henrik</a></small>
-    </div>
+    <Router>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="*"><NotFound /></Route>
+        </Switch>
+    </Router>
   );
 }
-
-export default App;
