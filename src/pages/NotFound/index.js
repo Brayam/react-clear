@@ -3,8 +3,6 @@ import { Redirect } from 'react-router-dom';
 
 import './styles.scss';
 
-function NotFound() {
+export default function NotFound() {
   return <Redirect to={'/'} />
 }
-
-export default NotFound;
