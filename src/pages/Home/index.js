@@ -3,7 +3,7 @@ import SEO from '../../components/core/Seo';
 
 import './styles.scss'
 
-function Home() {
+export default function Home() {
   return (
     <div className="App">
       <SEO
@@ -17,8 +17,6 @@ function Home() {
     </div>
   );
 }
-
-export default Home;
 
 
 

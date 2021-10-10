@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 
 const HOST = window.location.protocol.concat("//").concat(window.location.host);
 
-function SEO (props) {
+export default function SEO (props) {
   return (
     <Helmet>
       <meta name="robots" content={`${props.metaRobots ? props.metaRobots : "index, follow"}`} />
@@ -26,5 +26,3 @@ function SEO (props) {
     </Helmet>
   );
 };
-
-export default SEO;
